@@ -103,13 +103,17 @@ def test_skill_bodies_are_substantive():
 
 def test_skill_count_matches_documented_claims():
     count = len(skill_dirs())
-    plugin = load_json(PLUGIN_JSON)
-    words = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five"}
-    claim = f"{words[count]} on-demand skills"
-    assert claim in plugin["description"], "plugin.json skill count is stale"
-    assert claim in README.read_text(encoding="utf-8"), (
-        "README skill count is stale"
+    words = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
+    heading = f"**{words[count]} skills:**"
+    assert heading in README.read_text(encoding="utf-8"), (
+        "README skill-count heading is stale"
     )
+
+
+def test_manifest_descriptions_agree():
+    plugin = load_json(PLUGIN_JSON)
+    marketplace = load_json(MARKETPLACE_JSON)
+    assert plugin["description"] == marketplace["plugins"][0]["description"]
 
 
 def test_skill_reference_files_exist_and_are_nonempty():
