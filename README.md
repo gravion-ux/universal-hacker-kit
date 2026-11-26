@@ -1,4 +1,8 @@
-# Universal Hacker Kit
+<p align="center"><img src="assets/banner.svg" alt="universal-hacker-kit banner" width="100%"/></p>
+
+# universal-hacker-kit
+
+[![CI](https://github.com/gravion-ux/universal-hacker-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/gravion-ux/universal-hacker-kit/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **Triager-grade bug bounty reports — on any platform, with any AI.**
 
@@ -14,7 +18,7 @@ the last mile: a duplicate they didn't check, an impact section that
 claims more than the PoC shows, a severity the scope page caps, a
 report a triager can't replay. This kit exists to close that gap.
 
-## What it adds
+## Features
 
 **An always-on discipline layer** — evidence rules, dedupe-first,
 scope checks and testing guardrails, loaded at the start of every
