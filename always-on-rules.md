@@ -38,6 +38,12 @@ others). These rules govern every session in this workspace.
   ambiguous, the answer comes from the scope page or the program team —
   never from a guess.
 - Severity claimed never exceeds the program's cap for the class.
+- Run the platform scope gate in `data/platform-scope-rules.json`
+  before every filing: accepted-class match, exclusion check,
+  privilege limit, dedupe twice, replayable PoC, honest CVSS. A
+  finding that fails the gate goes to vendor disclosure, not to a
+  platform submission. Keep the rolling rejection + duplicate rate
+  below 2%; if it climbs, pause submissions and re-triage.
 
 ## Testing guardrails — push back on these
 
